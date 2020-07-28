@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            table {
+                border-collapse: collapse;
+            }
+            
+            table, th, td {
+                border: 2px solid black;
+            }
+
+            td, th {
+                padding-inline: 15px;
+                text-align: center;
+            }
+
+        </style>
+        <meta charset="UTF-8">
+        <title>Simple Front End Example</title>
+    </head>
+    <body>
+        <p>Push the button</p>
+        <form method="POST">
+            <input type="submit" name="btn" id="btn" value="Submit">
+        </form>
+        <br><br><br>
+        <table>
+            <tr><th>Date</th><th>Button <br>Push Count</th></tr>
+            {{range .ClickCounts}}
+            <tr><td>{{.Date}}</td><td>{{.Count}}</td></tr>
+            {{end}}
+        </table>
+    </body>
+</html>
